@@ -1,0 +1,18 @@
+python编写client的步骤：
+
+1.创建一个socket以连接服务器
+	
+	clinet=socket.socket()
+
+2.使用socket的connect方法连接服务器
+
+	socket.connect( (host,port) )
+
+host代表服务器主机名或IP，port代表服务器进程所绑定的端口号。如连接成功，客户就可通过套接字与服务器通信，如果连接失败，会引发socket.error异常。
+	
+3.处理阶段，客户端和服务器将通过send方法和recv方法通信
+
+4.传输接受，客户端通过调用socket的close方法关闭连接
+
+疑问：通信之前建立的socket不参与具体通信，那它的作用是什么？
+	  整个socket的原理是什么？
